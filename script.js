@@ -53,6 +53,9 @@ addTask.addEventListener("click", () => {
 
   let check = document.createElement("input");
   check.type = "checkbox";
+   check.addEventListener("change", ()=> {
+        taskdiv.classList.toggle("completed");
+    });
 
   let span = document.createElement("span");
   span.textContent = inputText.value;

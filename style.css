@@ -121,6 +121,7 @@ body {
   display: flex;
   justify-content: center;
   gap: 20px;
+  margin-bottom: 20px;
 }
 .newtask input {
   transform: scale(2.5);
@@ -158,7 +159,7 @@ body {
     padding: 15px 50px;
   }
   .form{
-    width: 80%;
-    height: 27%;
+    width: 88%;
+    height: 30%;
   }
-}
+} 
