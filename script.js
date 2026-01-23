@@ -39,36 +39,43 @@ form.addEventListener("submit", (e) => {
     });
 });
 
-
-
 const inputText = document.getElementById("inputText");
 const addTask = document.getElementById("addTask");
 const contain = document.getElementById("contain");
 
-addTask.addEventListener("click",()=>{
-    if(inputText.value==""){
-        alert("Enter a task");
-        return;
-    }
-    
-    let taskdiv = document.createElement("div");
+addTask.addEventListener("click", () => {
+  if (inputText.value == "") {
+    alert("Enter a task");
+    return;
+  }
 
-    let check = document.createElement("input");
-    check.type = "checkbox";
+  let taskdiv = document.createElement("div");
 
-    let span = document.createElement("span");
-    span.textContent = inputText.value;
+  let check = document.createElement("input");
+  check.type = "checkbox";
 
-    let del = document.createElement("button");
-    del.textContent = "Delete"
+  let span = document.createElement("span");
+  span.textContent = inputText.value;
 
-    del.onclick=()=>{
-        taskdiv.remove();
-    }
+  let del = document.createElement("button");
+  del.textContent = "Delete";
 
-    taskdiv.append(check,span,del);
-    contain.appendChild(taskdiv);
+  del.onclick = () => {
+    taskdiv.remove();
+  };
 
-    inputText.value="";
+  taskdiv.append(check, span, del);
+  contain.appendChild(taskdiv);
 
-})
+  inputText.value = "";
+
+  taskdiv.classList.add("newtask");
+});
+
+let closeicon = document.getElementsByClassName("closeicon")[0];
+let loginclass = document.getElementsByClassName("loginclass")[0];
+
+closeicon.addEventListener("click", () => {
+  let closediv = document.createElement("closediv");
+  loginclass.classList.add("closediv");
+});

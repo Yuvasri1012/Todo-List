@@ -14,31 +14,28 @@
     />
   </head>
   <body>
-    <div id="logincontainer">
+    <div id="logincontainer" class="loginclass ">
       <form class="form">
         <section class="closeicon">
           <i class="ri-close-circle-line"></i>
         </section>
         <section class="address">
-        Email Id<input
-          type="email"
-          class="email"
-          placeholder="Enter Your Email"
-        />
-        Password<input
-          type="password"
-          class="password"
-          placeholder="Enter the Password"
-        />
-        <button id="submit">Login</button>
+          Email Id<input type="email" class="email" /> Password<input
+            type="password"
+            class="password"
+          />
+          <button id="submit">Login</button>
         </section>
       </form>
     </div>
-
-    <div id="contain">
-      <h2>TODO LIST</h2>
-      <input type="text" id="inputText" placeholder="Enter a task" />
-      <button id="addTask">Add List</button>
+    <div id="wholecontain">
+      <div id="contain">
+        <h2>TODO LIST</h2>
+        <section class="list">
+          <input type="text" id="inputText" placeholder="Enter a task" />
+          <button id="addTask">Add List</button>
+        </section>
+      </div>
     </div>
     <script type="module" src="./script.js"></script>
   </body>
