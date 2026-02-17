@@ -2,7 +2,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #4e73df;
+  background: #95acf1;
   font-family: Arial;
   height: 100vh;
 }
@@ -116,9 +116,10 @@ span {
 .completed span {
   text-decoration: line-through;
   color: green;
-}
+} 
 
-.completed button {
-  /* background-color: green; */
-  text-decoration: line-through;
-}
+@media(max-width:600px){
+  #contain{
+    width: 300px;
+  }
+} 
