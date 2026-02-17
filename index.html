@@ -5,30 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Todo List</title>
     <link rel="stylesheet" href="./style.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css"
-      integrity="sha512-kJlvECunwXftkPwyvHbclArO8wszgBGisiLeuDFwNM8ws+wKIw0sv1os3ClWZOcrEB2eRXULYUsm8OVRGJKwGA=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
   </head>
   <body>
-    <div id="logincontainer" class="loginclass ">
-      <form class="form">
-        <section class="closeicon">
-          <i class="ri-close-circle-line"></i>
-        </section>
-        <section class="address">
-          Email Id<input type="email" class="email" /> Password<input
-            type="password"
-            class="password"
-          />
-          <button id="submit">Login</button>
-        </section>
+      <div class="container">
+      <!-- Login Form -->
+      <form id="loginForm">
+        <h2>Login</h2>
+        <input type="email" placeholder="Email" id="loginEmail" required />
+        <input
+          type="password"
+          id="loginPassword"
+          placeholder="Password"
+          required
+        />
+        <button type="submit" id="loginbtn">Login</button>
+        <p>Don't have account? <span id="showSignup">Signup</span></p>
+      </form>
+
+      <!-- Signup Form -->
+      <form id="signupForm" class="hidden">
+        <h2>Signup</h2>
+        <input type="text" placeholder="Username" required />
+        <input type="email" placeholder="Email" id="signupEmail" required />
+        <input type="password" placeholder="Password" id="signupPassword" required />
+        <button type="submit" id="signupbtn">Signup</button>
+        <p>Already have account? <span id="showLogin">Login</span></p>
       </form>
     </div>
-    <div id="wholecontain">
+
+    <div class="newdiv">
+      <div id="wholecontain">
       <div id="contain">
         <h2>TODO LIST</h2>
         <section class="list">
@@ -37,6 +43,9 @@
         </section>
       </div>
     </div>
+    <div id="taskContainer"></div>
+    </div>
+
     <script type="module" src="./script.js"></script>
   </body>
 </html>
