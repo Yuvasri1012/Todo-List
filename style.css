@@ -116,10 +116,10 @@ span {
 .completed span {
   text-decoration: line-through;
   color: green;
-} 
+}
 
-@media(max-width:600px){
-  #contain{
+@media (max-width: 600px) {
+  #contain {
     width: 300px;
   }
-} 
+}

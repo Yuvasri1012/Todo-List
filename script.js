@@ -25,7 +25,6 @@ const auth = getAuth(app);
 const loginForm = document.getElementById("loginForm");
 const signupForm = document.getElementById("signupForm");
 
-
 document.getElementById("showSignup").addEventListener("click", () => {
   loginForm.classList.add("hidden");
   signupForm.classList.remove("hidden");
@@ -37,8 +36,6 @@ document.getElementById("showLogin").addEventListener("click", () => {
 });
 
 document.getElementById("signupbtn").addEventListener("click", (e) => {
-    console.log(signupbtn);
-    
   e.preventDefault();
   const email = document.getElementById("signupEmail").value;
   const password = document.getElementById("signupPassword").value;
@@ -74,7 +71,6 @@ document.getElementById("loginbtn").addEventListener("click", (e) => {
     });
 });
 
-
 const inputText = document.getElementById("inputText");
 const addTask = document.getElementById("addTask");
 const taskContainer = document.getElementById("taskContainer");
@@ -89,9 +85,9 @@ addTask.addEventListener("click", () => {
 
   let check = document.createElement("input");
   check.type = "checkbox";
-   check.addEventListener("change", ()=> {
-        taskdiv.classList.toggle("completed");
-    });
+  check.addEventListener("change", () => {
+    taskdiv.classList.toggle("completed");
+  });
 
   let span = document.createElement("span");
   span.textContent = inputText.value;
@@ -110,4 +106,3 @@ addTask.addEventListener("click", () => {
 
   taskdiv.classList.add("newtask");
 });
-
