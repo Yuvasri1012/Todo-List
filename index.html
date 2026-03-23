@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
-      <div class="container">
+    <div class="container">
       <!-- Login Form -->
       <form id="loginForm">
         <h2>Login</h2>
@@ -27,7 +27,12 @@
         <h2>Signup</h2>
         <input type="text" placeholder="Username" required />
         <input type="email" placeholder="Email" id="signupEmail" required />
-        <input type="password" placeholder="Password" id="signupPassword" required />
+        <input
+          type="password"
+          placeholder="Password"
+          id="signupPassword"
+          required
+        />
         <button type="submit" id="signupbtn">Signup</button>
         <p>Already have account? <span id="showLogin">Login</span></p>
       </form>
@@ -35,17 +40,16 @@
 
     <div class="newdiv">
       <div id="wholecontain">
-      <div id="contain">
-        <h2>TODO LIST</h2>
-        <section class="list">
-          <input type="text" id="inputText" placeholder="Enter a task" />
-          <button id="addTask">Add List</button>
-        </section>
+        <div id="contain">
+          <h2>TODO LIST</h2>
+          <section class="list">
+            <input type="text" id="inputText" placeholder="Enter a task" />
+            <button id="addTask">Add List</button>
+          </section>
+        </div>
       </div>
+      <div id="taskContainer"></div>
     </div>
-    <div id="taskContainer"></div>
-    </div>
-
 
     <script type="module" src="./script.js"></script>
   </body>
