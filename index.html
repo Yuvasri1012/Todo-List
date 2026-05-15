@@ -7,48 +7,49 @@
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
-    <div class="container">
+
+    <canvas id="bg-canvas"></canvas>
+
+    <!-- Auth Container -->
+    <div class="auth-wrap" id="authWrap">
+
       <!-- Login Form -->
-      <form id="loginForm">
+      <form id="loginForm" novalidate>
         <h2>Login</h2>
-        <input type="email" placeholder="Email" id="loginEmail" required />
-        <input
-          type="password"
-          id="loginPassword"
-          placeholder="Password"
-          required
-        />
-        <button type="submit" id="loginbtn">Login</button>
-        <p>Don't have account? <span id="showSignup">Signup</span></p>
+        <p id="loginError" class="form-error"></p>
+        <input type="email"    id="loginEmail"    placeholder="Email"    autocomplete="email"            required />
+        <input type="password" id="loginPassword" placeholder="Password" autocomplete="current-password" required />
+        <button type="submit" id="loginBtn">Login</button>
+        <p class="switch-link">Don't have an account? <span id="showSignup">Sign up</span></p>
       </form>
 
       <!-- Signup Form -->
-      <form id="signupForm" class="hidden">
-        <h2>Signup</h2>
-        <input type="text" placeholder="Username" required />
-        <input type="email" placeholder="Email" id="signupEmail" required />
-        <input
-          type="password"
-          placeholder="Password"
-          id="signupPassword"
-          required
-        />
-        <button type="submit" id="signupbtn">Signup</button>
-        <p>Already have account? <span id="showLogin">Login</span></p>
+      <form id="signupForm" class="hidden" novalidate>
+        <h2>Sign Up</h2>
+        <p id="signupError" class="form-error"></p>
+        <input type="text"     id="signupUsername" placeholder="Username" autocomplete="username"     required />
+        <input type="email"    id="signupEmail"    placeholder="Email"    autocomplete="email"        required />
+        <input type="password" id="signupPassword" placeholder="Password" autocomplete="new-password" required />
+        <button type="submit" id="signupBtn">Sign Up</button>
+        <p class="switch-link">Already have an account? <span id="showLogin">Login</span></p>
       </form>
+
     </div>
 
-    <div class="newdiv">
-      <div id="wholecontain">
-        <div id="contain">
-          <h2>TODO LIST</h2>
-          <section class="list">
-            <input type="text" id="inputText" placeholder="Enter a task" />
-            <button id="addTask">Add List</button>
-          </section>
+    <!-- Todo App (hidden until login) -->
+    <div class="todo-wrap hidden" id="todoWrap">
+      <div class="todo-card">
+        <div class="todo-header">
+          <h2>📝 Todo List</h2>
+          <button id="logoutBtn" class="logout-btn">Logout</button>
         </div>
+        <div class="task-input-row">
+          <input type="text" id="inputText" placeholder="Enter a task…" maxlength="120" autocomplete="off" />
+          <button id="addTask">Add</button>
+        </div>
+        <p id="emptyMsg" class="empty-msg">No tasks yet. Add one above!</p>
+        <div id="taskContainer"></div>
       </div>
-      <div id="taskContainer"></div>
     </div>
 
     <script type="module" src="./script.js"></script>
